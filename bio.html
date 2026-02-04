@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie | Sophie ma Secrétaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --plum-dark: #4a2c3a;
+            --pink-soft: #f9e4e8;
+            --pink-accent: #d4a5b4;
+            --white: #ffffff;
+            --text-dark: #333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--pink-soft);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: var(--plum-dark);
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--plum-dark);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section Bio */
+        .bio-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: var(--white);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(74, 44, 58, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .bio-image {
+            flex: 1 1 350px;
+            background-color: var(--plum-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            min-height: 400px;
+        }
+
+        .avatar-placeholder {
+            width: 400px;
+            height: 400px;
+            background: url('assets/photoBio.png') no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            border: 8px solid var(--pink-accent);
+        }
+
+        .bio-content {
+            flex: 1 1 450px;
+            padding: 50px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--plum-dark);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--plum-dark);
+            font-size: 1.1rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--pink-soft);
+            display: inline-block;
+        }
+
+        .subtitle {
+            color: var(--pink-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .bio-text p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .bio-text ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            list-style-type: none;
+        }
+
+        .bio-text ul li {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .bio-text ul li::before {
+            content: "•";
+            color: var(--pink-accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Bouton */
+        .btn-contact {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: var(--pink-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            transform: scale(1.05);
+            background-color: var(--plum-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .bio-container { margin: 20px; }
+            .bio-content { padding: 30px; }
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--plum-dark);
+        }
+
+        .info-item a {
+            color: var(--plum-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .info-item a:hover {
+            color: var(--pink-accent);
+        }
+
+        .footer-info {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--pink-soft);
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+    <div class="logo">Sophie ma Secrétaire</div>
+    </a>
+        <nav>
+        <a href="#">A Propos</a>
+        <a href="#">Tarifs</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="bio-container">
+        <div class="bio-image">
+            <div class="avatar-placeholder"></div>
+        </div>
+
+        <div class="bio-content">
+            <span class="subtitle">Mon Parcours</span>
+            <h1>Qui se cache derrière Sophie ?</h1>
+            
+            <div class="bio-text">
+                <p>Que vous soyez proche aidant, sénior ou famille active, je suis l'alliée de votre organisation administrative, avec rigueur et bienveillance. Forte de 11 ans d'expérience d'assistante administrative dans le domaine médico-social, je vous accompagne pour que vous puissiez bénéficier de toutes les aides auxquelles vous avez droit. Je ne suis pas seulement là pour remplir des cases, je suis là pour monter des dossiers solides (MDPH, APA, dossiers de retraite, mutuelles) qui font la différence. Faire face à une situation de handicap, à une perte d'autonomie ou à un changement de vie est déjà un défi en soi. L'administration ne devrait pas être une double peine. De la même façon, lorsqu'on est aidant familial, on veut tous le meilleur pour nos proches, mais le temps et l'énergie manquent souvent pour gérer l'immense chantier administratif qui accompagne le grand âge ou la maladie.</p>
+
+                <h2>Ce que je vous apporte :</h2>
+                <ul>
+                    <li>Une connaissance pointue des dispositifs d'aide.</li>
+                    <li>Un accompagnement pour l'outil informatique et les démarches en ligne.</li>
+                    <li>Un lien facilité avec les différents organismes.</li>
+                </ul>
+
+                <h2>Pour quels bénéfices :</h2>
+                <ul>
+                    <li>Gagnez du temps de qualité avec vos proches.</li>
+                    <li>Évitez les erreurs de dossiers ou les retards de paiement.</li>
+                    <li>Bénéficiez d'un regard professionnel sur les aides disponibles.</li>
+                </ul>
+
+                <h2>Pourquoi me faire confiance ?</h2>
+                <ul>
+                    <li><strong>Mon expérience :</strong> Je connais les rouages du système social sur le bout des doigts.</li>
+                    <li><strong>Ma proximité :</strong> Je me déplace chez vous, dans votre environnement, à votre rythme.</li>
+                    <li><strong>Ma discrétion :</strong> Le respect de votre vie privée est ma priorité absolue.</li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <div class="info-item">
+                    <span>📧</span>
+                    <a href="mailto:guemin.sophie@gmail.com">guemin.sophie@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <span>📞</span>
+                    <a href="tel:+33644280075">06 44 28 00 75</a>
+                </div>
+                <div class="info-item">
+                    <span>📍</span>
+                    <span>Albi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide Sociale | Sophie ma Secrétaire</title>
+    <style>
+        /* --- Importation des polices --- */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+        :root {
+            --main-rose: #d6a4bc;
+            --light-rose: #fdf4f7;
+            --accent-gold: #c5a059;
+            --deep-plum: #4a2c3a;
+            --white: #ffffff;
+            --shadow-soft: 0 10px 30px rgba(74, 44, 58, 0.08);
+            --hero-gradient: linear-gradient(135deg, #4a2c3a 0%, #7d4a61 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--light-rose);
+            color: var(--deep-plum);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--main-rose);
+            padding: 0.8rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-site {
+            text-decoration: none;
+            color: var(--deep-plum);
+            font-weight: 800;
+            font-size: 1.4rem;
+            font-family: 'Sofia', cursive;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--deep-plum); font-weight: 600; font-size: 0.95rem; }
+
+        /* --- HERO SECTION --- */
+        .service-hero {
+            background: var(--hero-gradient);
+            padding: 80px 20px;
+            color: var(--white);
+            text-align: center;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .service-hero h1 {
+            font-family: 'Sofia', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            color: var(--main-rose);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 25px;
+            border: 1px solid var(--main-rose);
+        }
+
+        .container-p {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-style: italic;
+            font-family: 'Sofia', cursive;
+            line-height: 1.4;
+        }
+
+        /* --- CONTENU PRINCIPAL --- */
+        .main-content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .info-card {
+            flex: 2;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .side-card {
+            flex: 1;
+            background: var(--deep-plum);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .side-card .emoji { font-size: 3rem; margin-bottom: 20px; display: block; }
+
+        h2 { font-family: 'Sofia', cursive; font-size: 2.2rem; margin-bottom: 25px; color: var(--deep-plum); }
+        h3 { color: var(--deep-plum); margin-top: 25px; margin-bottom: 10px; font-weight: 800; }
+        
+        .steps { margin-top: 40px; }
+        .step-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--main-rose); }
+        .step-title { font-weight: 800; color: var(--deep-plum); display: block; }
+
+        /* --- FOOTER (Infos Perso) --- */
+        .footer {
+            background: var(--deep-plum);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 4px solid var(--accent-gold);
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-item a { color: var(--white); text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 900px) {
+            .main-content { flex-direction: column; }
+            .service-hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-container">
+        <a href="index.html" class="logo-site">
+            <span class="hero">Sophie Ma Secrétaire À Domicile</span>
+        </a>        
+        <nav>
+            <ul>
+                <li><a href="#">A Propos</a></li>
+                <li><a href="#">Tarifs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="service-hero">
+    <a href="#" class="back-link", style="text-align: left;">← Retour à l'accueil</a>
+    <h1>Aide Sociale</h1>
+    <p class="container-p">
+        "Monter un dossier de demande d'aide financière ou sociale peut vite devenir un parcours du combattant, source de stress pour vous ou pour vos proches aidants."
+    </p>
+</div>
+
+<main class="main-content">
+    <div class="info-card">
+        <h2>Accompagnement administratif</h2>
+        <p>Je me déplace chez vous, dans votre environnement familier, pour vous accompagner pas à pas dans la constitution, la rédaction et le suivi de vos dossiers. Grâce à ma connaissance des dispositifs, je m'assure que vous demandiez toutes les aides pertinentes pour votre situation.</p>
+
+        <h3>Domaines d'intervention :</h3>
+        <ul style="list-style: none; margin-top: 10px;">
+            <li><strong>• L'APA :</strong> Pour financer les aides à domicile ou l'hébergement.</li>
+            <li><strong>• Caisses de Retraite :</strong> Dispositifs "Bien vieillir chez soi", "Sortir plus"...</li>
+            <li><strong>• MDPH :</strong> Demandes de PCH, cartes d'invalidité ou de stationnement.</li>
+            <li><strong>• Santé :</strong> Gestion CPAM et mutuelle, suivi des remboursements.</li>
+        </ul>
+
+        <div class="steps">
+            <h2>Comment ça se déroule ?</h2>
+            <div class="step-item">
+                <span class="step-title">1. L'Évaluation à domicile</span>
+                Premier rendez-vous gratuit pour identifier toutes vos aides potentielles.
+            </div>
+            <div class="step-item">
+                <span class="step-title">2. La Collecte des pièces</span>
+                Je vous aide à rassembler et trier tous vos justificatifs.
+            </div>
+            <div class="step-item">
+                <span class="step-title">3. Le Montage et l'Envoi</span>
+                Saisie des formulaires et rédaction des courriers d'accompagnement.
+            </div>
+            <div class="step-item">
+                <span class="step-title">4. Le Suivi du dossier</span>
+                Gestion des relances jusqu'à la réponse définitive.
+            </div>
+        </div>
+    </div>
+
+    <aside class="side-card">
+        <h2 style="color: white; font-size: 1.8rem;">Pourquoi moi ?</h2>
+        <p style="margin-bottom: 20px; opacity: 0.9;"><strong>Gagnez en sérénité :</strong> Délestez-vous du stress et de la peur de "mal faire".</p>
+        <p style="margin-bottom: 20px; opacity: 0.9;"><strong>Gagnez du temps :</strong> Profitez de vos proches, je m'occupe du reste.</p>
+        <p style="opacity: 0.9;"><strong>Optimisez vos droits :</strong> Ne passez à côté d'aucune aide financière.</p>
+    </aside>
+</main>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-item">📧 <a href="mailto:contact@sophie-secretaire.fr">contact@sophie-secretaire.fr</a></div>
+        <div class="footer-item">📞 <a href="tel:+33600000000">06 00 00 00 00</a></div>
+        <div class="footer-item">📍 Paris et Île-de-France</div>
+    </div>
+    <p style="opacity: 0.6; font-size: 0.8rem;">&copy; 2026 Sophie Ma Secrétaire À Domicile - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
